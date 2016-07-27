@@ -1,0 +1,262 @@
+/*FONTS*/
+@font-face {
+    font-family: 'Palatino Linotype';
+    src: url(../fonts/pala.ttf);
+}
+
+/*GENERAL SETTINGS*/
+/*html {height: 100%;}*/
+body {
+	height: 100%;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 400;
+}
+ol, ul {list-style: none;}
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a, a:hover {text-decoration: none;}
+.clearfix {
+	padding-right: 5px;
+	padding-left: 5px;
+	max-width: 1120px;
+	width: 100%;
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {clear: both;}
+.left {float:left;}
+.right {float:right;}
+.text-right {text-align: right;}
+
+/*HEADER*/
+header .container {
+	margin: 0 auto;
+}
+header {
+	position: relative;
+	padding: 0px;
+	background-image: url("../images/background_big_header.png");
+	background-position: center;
+	max-width: 1120px;
+	height: 515px;
+}
+nav {
+	margin: 0 auto;
+	float: left;
+	height: 40px;
+    margin-top: 428px;
+    margin-left: 20%;
+}
+.nav li {
+	float: left;
+	width: 104px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 400;
+	font-size: 13pt;
+	text-transform: uppercase;
+}
+.nav li a,
+#touch-menu {
+	display: block;
+	padding: 9px;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 400;
+	font-size: 14pt;
+	padding: 0;
+	margin-top: 5px;
+	text-transform: uppercase;
+	text-decoration: none;
+	z-index: 5;
+	color: #fff;
+}
+.nav li a:hover {background: none;}
+header .current {text-decoration: underline white;}
+#touch-menu {display: none;}
+#search {
+	width: 25%;
+	padding-top: 4px;
+	float: right;
+}
+#search input {
+	height: 42px;
+	float: left;
+	margin-right: 5px;
+	padding: 0 10px;
+	border: none;
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+#search input[type="text"] {
+	width: 75%;
+	margin-right: 3%;
+	font-size: 14pt;
+}
+#search button[type="submit"] {
+	width: 18%;
+	cursor: pointer;
+	font-size: 12pt;
+	color: black;
+	background-color: none;
+}
+
+/*RESPONSIVE MENU*/
+@media (max-width: 1023px) {
+	header {
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 515px;
+		position: relative;
+		z-index: 10;
+	}
+	.logo img {height: 30px;}
+	.nav {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 5;
+		display: none;
+	}
+	.nav li {float: none;
+		width: 100%;
+	}
+	.nav li a {
+		color: #666;
+		border-top: 1px solid #eee;
+		border-left: 3px solid transparent;
+		background: #fff;
+		height: 50px;
+		margin-top: 0;
+		padding-top: 12px;
+	}
+	.nav li:first-child a {border-top: none;}
+	.nav li a:hover {
+		color: #333;
+		border-left: 3px solid #515572;
+		background: #f0f0f0;
+	}
+	#touch-menu {
+		display: block;
+		float: left;
+		margin-top: 428px;
+		margin-bottom: 0px;
+		margin-left: 45%;
+	}
+	#touch-menu li {
+		width: 100%;
+		text-align: center;
+	}
+
+	/*SEARCH*/
+	#search {
+		position: relative;
+		padding-top: 0;
+		margin-right: 5px;
+	}
+	#search input {
+		height: 42px;
+		margin-top: 4px;
+	}
+	#search input[type="text"] {
+		width: 100%;
+	}
+	#search button[type="submit"] {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 20px;
+		text-indent: 999px;
+		overflow: hidden;
+		color: white;
+	}
+}
+@media (max-height: 320px) and (max-width: 768px) {
+	.nav {
+		left: 58px;
+		width: 200px;
+	}
+	.nav li a {padding: 5px 10px;}
+}
+
+/*MAIN*/
+header.container::after, footer::before{
+	display: block;
+	content: "";
+	height: 11px;
+	width: auto;
+	margin: 0 auto;
+	background-image: url(../images/line.png);
+	background-repeat: repeat-x;
+}
+main .container {
+	margin: 50px auto;
+	width: 1120px;
+}
+button {
+	background-color: white;
+	border: 1px solid black;
+	padding: 10px 20px;
+}
+.item-button {
+	font-size: 15pt;
+	font-weight: 300;
+}
+.item-button:hover {
+	background-color: rgb(224, 224, 224);
+}
+.block-1x1, .block-1x2, .block-2x2 {
+	display: inline-block;
+	margin: 5px;
+}
+.block-1x1 {
+	width: 310px;
+	height: 300px;
+}
+.block-1x2 {
+	width: 620px;
+	height: 300px;
+}
+.block-2x2 {
+	width: 600px;
+	height: 620px;
+}
+
+/*FOOTER*/
+footer {
+	background-color: #363636;
+	margin: 0 auto;
+	height: 105px;
+	width: auto;
+	max-width: 1120px;
+	color: white;
+	text-align: center;
+	font-size: 14pt;
+}
+footer p {
+	padding-top: 40px;
+	margin: 0 auto;
+}
+.scrollup {
+	width: 40px;
+	height: 40px;
+	opacity: 0.3;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	display: none;
+	text-indent: -9999px;
+	background: url("../images/icon_top.png") no-repeat;
+}
