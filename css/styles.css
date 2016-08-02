@@ -53,11 +53,12 @@ header {
 	float: left;	
 	font-family: 'Palatino Linotype', Arial, serif;
 	font-weight: 400;
-	font-size: 20.87pt;	
+	font-size: 16pt;
+	text-transform: uppercase;
 	height: 50px;
 	width: 82px;
-	padding-top: 5px;
-	margin-left: 18px;
+	padding-top: 10px;
+	margin-left: 25px;
 	margin-right: 8px;
 }
 .logo a, .logo a:hover {
@@ -72,12 +73,9 @@ nav {
 }
 .nav li {
 	float: left;
-	width: 104px;
+	width: 80px;
+	margin-left: 20px;
 	text-align: center;
-	font-family: 'Open Sans', sans-serif; 
-	font-weight: 400;
-	font-size: 13pt;
-	text-transform: uppercase;
 }
 .nav li a,
 #touch-menu {
@@ -86,7 +84,7 @@ nav {
 	font-weight: bold;
 	font-family: 'Open Sans', sans-serif; 
 	font-weight: 400;
-	font-size: 14pt;
+	font-size: 12pt;
 	padding: 0;
 	margin-top: 5px;
 	text-transform: uppercase;
@@ -207,14 +205,15 @@ header .current {text-decoration: underline white;}
 header.container::after, footer::before{
 	display: block;
 	content: "";
-	height: 11px;
+	height: 10px;
 	width: auto;
 	margin: 0 auto;
 	background-image: url(../images/line.png);
 	background-repeat: repeat-x;
 }
 main .container {
-	margin: 50px auto;
+	margin: 59px auto;
+	max-width: 1120px;
 }
 .collections {
 	max-width: 940px;
@@ -234,23 +233,23 @@ main .container {
 	display: inline-block;
 	max-width: 600px;
 	min-width: 400px;
-	padding-left: 10px;
+	padding-left: 15px;
 	padding-bottom: 10px;
 }
 .collection-text h3 {
 	margin-top: 5px;
-	font-size: 20pt;
+	font-size: 15pt;
 	text-transform: uppercase;
 }
 .collection-text p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	font-size: 14pt;
+	font-size: 12pt;
 }
 time {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 100;	
-	font-size: 13pt;
+	font-size: 10pt;
 	margin: 10px auto;
 }
 button {

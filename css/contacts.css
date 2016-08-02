@@ -1,0 +1,6 @@
+.container .row {
+	height: 250px;
+}
+.text-right {
+	border-right: 2px solid black;
+}

@@ -1,11 +1,4 @@
-/*FONTS*/
-@font-face {
-    font-family: 'Palatino Linotype';
-    src: url(../fonts/pala.ttf);
-}
-
 /*GENERAL SETTINGS*/
-/*html {height: 100%;}*/
 body {
 	height: 100%;
 	font-family: 'Open Sans', sans-serif; 
@@ -54,7 +47,7 @@ nav {
 	float: left;
 	height: 40px;
     margin-top: 428px;
-    margin-left: 20%;
+    margin-left: 15%;
 }
 .nav li {
 	float: left;
@@ -201,10 +194,10 @@ header.container::after, footer::before{
 	background-image: url(../images/line.png);
 	background-repeat: repeat-x;
 }
-main .container {
+/*main .container {
 	margin: 50px auto;
 	width: 1120px;
-}
+}*/
 button {
 	background-color: white;
 	border: 1px solid black;
@@ -217,21 +210,36 @@ button {
 .item-button:hover {
 	background-color: rgb(224, 224, 224);
 }
+main .container .row {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.col-lg-4, .col-md-4, .col-sm-4, .col-xs-4,
+.col-lg-8, .col-md-8, .col-sm-8, .col-xs-8 {
+	/*display: table;*/
+}
 .block-1x1, .block-1x2, .block-2x2 {
-	display: inline-block;
-	margin: 5px;
+	text-align: center;
+	/*display: table-cell;*/
+	vertical-align: middle;
+	border: 1px solid black;
 }
 .block-1x1 {
 	width: 310px;
 	height: 300px;
 }
 .block-1x2 {
-	width: 620px;
+	width: 630px;
 	height: 300px;
 }
 .block-2x2 {
-	width: 600px;
-	height: 620px;
+	width: 630px;
+	height: 600px;
+}
+.center input {
+	height: 40px;
+	width: 225px;
+	background-color: #ebebeb;
 }
 
 /*FOOTER*/

@@ -28,3 +28,14 @@ $(document).ready(function(){
         }
     });
 });
+
+$(document).ready(function() { 
+	$("a.fancyimages").fancybox(); 
+	}); 
+	jQuery('.fancybox').fancybox({
+	  	padding: 0, //убираем отступ
+	  	helpers: {
+	    overlay: {
+	    	locked: false // отключаем блокировку overlay
+	}
+}});
