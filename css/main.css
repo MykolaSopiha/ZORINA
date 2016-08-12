@@ -1,3 +1,9 @@
+/*FONTS*/
+@font-face {
+    font-family: 'Palatino Linotype';
+    src: url(../fonts/pala.ttf);
+}
+
 /*GENERAL SETTINGS*/
 body {
 	height: 100%;
@@ -31,9 +37,6 @@ a, a:hover {text-decoration: none;}
 .text-right {text-align: right;}
 
 /*HEADER*/
-header .container {
-	margin: 0 auto;
-}
 header {
 	position: relative;
 	padding: 0px;
@@ -42,16 +45,26 @@ header {
 	max-width: 1120px;
 	height: 515px;
 }
-nav {
+header .container {
 	margin: 0 auto;
-	float: left;
+}
+nav {
 	height: 40px;
-    margin-top: 428px;
-    margin-left: 15%;
+    margin-top: 478px;
+    text-align: center;
+}
+.nav {
+	display: inline-block;
+	width: 641px;
+}
+.nav ul {
+	margin: 0 auto;
+	
 }
 .nav li {
 	float: left;
-	width: 104px;
+	margin-left: 10px;
+	margin-right: 10px;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif; 
 	font-weight: 400;
@@ -73,38 +86,80 @@ nav {
 	z-index: 5;
 	color: #fff;
 }
-.nav li a:hover {background: none;}
+.nav li a:hover {background: none; text-decoration: underline;}
 header .current {text-decoration: underline white;}
 #touch-menu {display: none;}
+
+/*SEARCH*/
 #search {
-	width: 25%;
-	padding-top: 4px;
+	width: 200px;
+	height: 40px;
+	position: relative;
 	float: right;
+	margin-top: 5px;
 }
 #search input {
-	height: 42px;
-	float: left;
-	margin-right: 5px;
-	padding: 0 10px;
 	border: none;
-	background: #f1f1f1;
+	height: 40px;
+}
+#search .input {
+	width: 100%;
+	padding: 8px 37px 9px 15px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
 	border-radius: 10px;
+	background: #EEE;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 400;
+	font-size: 13pt;
+	color: #555;
+	outline: none;
 }
-#search input[type="text"] {
-	width: 75%;
-	margin-right: 3%;
-	font-size: 14pt;
+#search .input:focus {
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+	background: #E8E8E8;
+	color: #333;
 }
-#search button[type="submit"] {
-	width: 18%;
+#search .submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 37px;
+	height: 100%;
 	cursor: pointer;
-	font-size: 12pt;
-	color: black;
-	background-color: none;
+	background: url(https://lh4.googleusercontent.com/-b-5aBxcxarY/UAfFW9lVyjI/AAAAAAAABUg/gQtEXuPuIds/s13/go.png) 50% no-repeat;
+	opacity: 0.5;
+}
+#search .submit:hover {
+	opacity: 0.8;
+}
+input[type="search"] {
+	-webkit-appearance: none;
+}
+*+html .search {
+	width: 28%;
+	padding: 0 52px 0 0;
+}
+#search .input {
+	border: 1px solid #DFDFDF;
+	border-top: 1px solid #B3B3B3;
+	padding-top: 7px;
+	padding-bottom: 8px;
+}
+#search .input:focus {
+	border: 1px solid #CFCFCF;
+	border-top: 1px solid #999;
+}
+#search .submit {
+	filter: alpha(opacity=50);
+}
+#search .submit:hover {
+	filter: alpha(opacity=80);
 }
 
 /*RESPONSIVE MENU*/
-@media (max-width: 1023px) {
+@media (max-width: 660px) {
 	header {
 		top: 0;
 		left: 0;
@@ -112,6 +167,9 @@ header .current {text-decoration: underline white;}
 		height: 515px;
 		position: relative;
 		z-index: 10;
+	}
+	input[type="submit"] {
+		display: none;
 	}
 	.logo img {height: 30px;}
 	.nav {
@@ -124,6 +182,8 @@ header .current {text-decoration: underline white;}
 	}
 	.nav li {float: none;
 		width: 100%;
+		margin-right: 0px;
+		margin-left: 0px;
 	}
 	.nav li a {
 		color: #666;
@@ -143,7 +203,7 @@ header .current {text-decoration: underline white;}
 	#touch-menu {
 		display: block;
 		float: left;
-		margin-top: 428px;
+		margin-top: 478px;
 		margin-bottom: 0px;
 		margin-left: 45%;
 	}
@@ -151,29 +211,8 @@ header .current {text-decoration: underline white;}
 		width: 100%;
 		text-align: center;
 	}
-
-	/*SEARCH*/
-	#search {
-		position: relative;
-		padding-top: 0;
-		margin-right: 5px;
-	}
-	#search input {
-		height: 42px;
-		margin-top: 4px;
-	}
-	#search input[type="text"] {
-		width: 100%;
-	}
-	#search button[type="submit"] {
+	#search input[type="submit"] {
 		display: none;
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 20px;
-		text-indent: 999px;
-		overflow: hidden;
-		color: white;
 	}
 }
 @media (max-height: 320px) and (max-width: 768px) {
@@ -185,19 +224,22 @@ header .current {text-decoration: underline white;}
 }
 
 /*MAIN*/
-header.container::after, footer::before{
+main::after, main::before {
 	display: block;
 	content: "";
 	height: 11px;
-	width: auto;
+	max-width: 1120px;
 	margin: 0 auto;
 	background-image: url(../images/line.png);
 	background-repeat: repeat-x;
 }
-/*main .container {
-	margin: 50px auto;
-	width: 1120px;
-}*/
+main::before {margin-bottom: 39px;}
+main::after {margin-top: 39px;}
+main .container {
+	width: 960px;
+	padding: 0;
+	margin: 0 auto;
+}
 button {
 	background-color: white;
 	border: 1px solid black;
@@ -210,37 +252,74 @@ button {
 .item-button:hover {
 	background-color: rgb(224, 224, 224);
 }
-main .container .row {
-	margin-top: 5px;
-	margin-bottom: 5px;
+input {
+	height: 40px;
+	width: 250px;
+	background-color: #ebebeb;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 400;
+	font-size: 13pt;
 }
-.col-lg-4, .col-md-4, .col-sm-4, .col-xs-4,
-.col-lg-8, .col-md-8, .col-sm-8, .col-xs-8 {
-	/*display: table;*/
+
+/*BLOCKS*/
+main .row {
+	width: 960px;
+	height: 300px;
+	margin: 10px 0 10px 0;
 }
-.block-1x1, .block-1x2, .block-2x2 {
-	text-align: center;
-	/*display: table-cell;*/
-	vertical-align: middle;
-	border: 1px solid black;
+main .FAQ {
+	height: 610px;
+	background: url("images/main/pic9.jpg");
+}
+main h2 {
+	text-transform: uppercase;
+}
+.block-1x1, .block-1x2, .block-2x1, .block-2x2 {
+	display: table;
+	float: left;
 }
 .block-1x1 {
 	width: 310px;
 	height: 300px;
+	margin: 0 5px 0 5px;
 }
 .block-1x2 {
 	width: 630px;
 	height: 300px;
+	margin: 0 5px 0 5px;
+}
+.block-2x1 {
+	width: 310px;
+	height: 610px;
+}
+.block-2x1 .block-1x1:first-of-type {
+	margin-bottom: 10px;
 }
 .block-2x2 {
 	width: 630px;
-	height: 600px;
+	height: 610px;
+	margin: 0 5px 0 5px;
 }
-.center input {
-	height: 40px;
-	width: 225px;
-	background-color: #ebebeb;
+.item-text {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }
+
+/*RESPONSIVE BLOCKS*/
+.disappear {display: table-cell;}
+.appear {display: none;}
+@media (max-width: 980px) {
+	main .row,  main .container {max-width: 640px;}
+	.block-1x2 {
+		width: 310px;
+		overflow: hidden;
+		display: block;
+	}
+	.disappear {display: none;}
+	.appear {display: block;}
+}
+
 
 /*FOOTER*/
 footer {

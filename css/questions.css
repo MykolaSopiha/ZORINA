@@ -49,3 +49,12 @@ main .fa {
 	width: 250px;
 	background-color: #ebebeb;
 }
+.recall button {
+	background-color: white;
+	border: 1px solid black;
+	padding: 10px 20px;
+	font-size: 15pt;
+	font-weight: 300;
+}
+.recall button:hover {
+	background-color: rgb(224, 224, 224);

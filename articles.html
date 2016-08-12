@@ -19,10 +19,11 @@
 
 	<link rel="stylesheet" type="text/css" href="css\normalize.css">
 	<link rel="stylesheet" type="text/css" href="css\styles.css">
+	<link rel="stylesheet" type="text/css" href="css\articles.css">
 </head>
 <body>
 	<header class="container clearfix">
-		<div class="logo"><a href="indexDEMO.html">Zorina</a></div>
+		<div class="logo"><a href="index.html">Zorina</a></div>
 		</div>
 		<a href="#" id="touch-menu">Меню</a>
 		<nav>
@@ -35,97 +36,117 @@
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
 		</nav>
-		<form action="#" id="search" class="clearfix">
-			<input type="text" placeholder="Поиск"/>
-			<button type="submit" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-search"></span></button>
+		<form action="#" method="post" id="search" class="clearfix">
+			<input type="search" name="" placeholder="Поиск..." class="input"/>
+			<input type="submit" name="" value="" class="submit"></button>
 		</form>
 	</header>
 	<main>
 		<div class="container">
 			<div class="collections">
 				<article class="collection-item">
-					<div class="collection-pic hovereffect">
-						<img class="img-responsive" src="images\pic1.jpg" alt="List picture">
-						<div class="overlay">
-			                <h2>Гостинная</h2>
-							<p> 
-								<a href="#">место, объединяющее всю семью</a>
-							</p> 
-		            	</div>
+					<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+						<div class="collection-pic hovereffect">
+							<img class="img-responsive" src="images\pic1.jpg" alt="List picture">
+							<div class="overlay">
+				                <h2>Гостинная</h2>
+								<p> 
+									<a href="#">место, объединяющее всю семью</a>
+								</p> 
+			            	</div>
+						</div>
 					</div>
-					<div class="collection-text">
-						<h3>Особенности Дизайна гостинной</h3>
-                		<time pubdate>21.12.16</time>
-                		<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.</p>
-                		<button class="item-button">Читать дальше</button>
-					</div>
-				</article>
-				<article class="collection-item">
-					<div class="collection-pic hovereffect">
-						<img class="img-responsive" src="images\pic2.jpg" alt="List picture">
-						<div class="overlay">
-			                <h2>Модерн</h2>
-							<p> 
-								<a href="#">сочетает баланс и финальную гармонию</a>
-							</p> 
-		            	</div>
-					</div>
-					<div class="collection-text">
-						<h3>Стиль модерн</h3>
-						<time pubdate>21.12.16</time>
-						<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия.</p>
-						<button class="item-button">Читать дальше</button>
+					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+						<div class="collection-text">
+							<h3>Особенности Дизайна гостинной</h3>
+	                		<time pubdate>21.12.16</time>
+	                		<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.</p>
+	                		<button class="item-button">Читать дальше</button>
+						</div>
 					</div>
 				</article>
 				<article class="collection-item">
-					<div class="collection-pic hovereffect">
-						<img class="img-responsive" src="images\pic3.jpg" alt="List picture">
-						<div class="overlay">
-			                <h2>"Открытые шторы были её будильником."</h2>
-							<p> 
-								<a href="#">Сесилия Ахерн</a>
-							</p> 
-		            	</div>
+					<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+						<div class="collection-pic hovereffect">
+							<img class="img-responsive" src="images\pic2.jpg" alt="List picture">
+							<div class="overlay">
+				                <h2>Модерн</h2>
+								<p> 
+									<a href="#">сочетает баланс и финальную гармонию</a>
+								</p> 
+			            	</div>
+						</div>
 					</div>
-					<div class="collection-text">
-						<h3>Какие шторы подходят к нашему интерьеру</h3>
-						<time pubdate>21.12.16</time>
-						<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.</p>
-						<button class="item-button">Читать дальше</button>
-					</div>
-				</article>
-				<article class="collection-item">
-					<div class="collection-pic hovereffect">
-						<img class="img-responsive" src="images\pic4.jpg" alt="List picture">
-						<div class="overlay">
-			                <h2>"Плинтус глядел на паркет свысока."</h2>
-							<p> 
-								<a href="#">Ашот Наданян</a>
-							</p> 
-		            	</div>
-					</div>
-					<div class="collection-text">
-						<h3>Паркет или линоллиум</h3>
-						<time pubdate>21.12.16</time>
-						<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.</p>
-						<button class="item-button">Читать дальше</button>
+					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+						<div class="collection-text">
+							<h3>Стиль модерн</h3>
+							<time pubdate>21.12.16</time>
+							<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия.</p>
+							<button class="item-button">Читать дальше</button>
+						</div>
 					</div>
 				</article>
 				<article class="collection-item">
-					<div class="collection-pic hovereffect">
-						<img class="img-responsive" src="images\pic5.jpg" alt="List picture">
-						<div class="overlay">
-			                <h2>Квартира-студия</h2>
-							<p>
-								<a href="#">минимум стен и перегородок</a>
-							</p> 
-		            	</div>
+					<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+						<div class="collection-pic hovereffect">
+							<img class="img-responsive" src="images\pic3.jpg" alt="List picture">
+							<div class="overlay">
+				                <h2>"Открытые шторы были её будильником."</h2>
+								<p> 
+									<a href="#">Сесилия Ахерн</a>
+								</p> 
+			            	</div>
+						</div>
 					</div>
-					<div class="collection-text">
-						<h3>Квартира-студия</h3>
-						<time pubdate>21.12.16</time>
-						<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.</p>
-						<button class="item-button">Читать дальше</button>
+					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+						<div class="collection-text">
+							<h3>Какие шторы подходят к нашему интерьеру</h3>
+							<time pubdate>21.12.16</time>
+							<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.</p>
+							<button class="item-button">Читать дальше</button>
+						</div>
+					</div>
+				</article>
+				<article class="collection-item">
+				<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+						<div class="collection-pic hovereffect">
+							<img class="img-responsive" src="images\pic4.jpg" alt="List picture">
+							<div class="overlay">
+				                <h2>"Плинтус глядел на паркет свысока."</h2>
+								<p> 
+									<a href="#">Ашот Наданян</a>
+								</p> 
+			            	</div>
+						</div>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+						<div class="collection-text">
+							<h3>Паркет или линоллиум</h3>
+							<time pubdate>21.12.16</time>
+							<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.</p>
+							<button class="item-button">Читать дальше</button>
+						</div>
+					</div>
+				</article>
+				<article class="collection-item">
+					<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+						<div class="collection-pic hovereffect">
+							<img class="img-responsive" src="images\pic5.jpg" alt="List picture">
+							<div class="overlay">
+				                <h2>Квартира-студия</h2>
+								<p>
+									<a href="#">минимум стен и перегородок</a>
+								</p> 
+			            	</div>
+						</div>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+						<div class="collection-text">
+							<h3>Квартира-студия</h3>
+							<time pubdate>21.12.16</time>
+							<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.</p>
+							<button class="item-button">Читать дальше</button>
+						</div>
 					</div>
 				</article>
 			</div>
