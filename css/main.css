@@ -40,7 +40,7 @@ a, a:hover {text-decoration: none;}
 header {
 	position: relative;
 	padding: 0px;
-	background-image: url("../images/background_big_header.png");
+	background-image: url("../images/big_header.png");
 	background-position: center;
 	max-width: 1120px;
 	height: 515px;
@@ -58,18 +58,14 @@ nav {
 	width: 641px;
 }
 .nav ul {
+	display: inline-block;
 	margin: 0 auto;
-	
 }
 .nav li {
 	float: left;
 	margin-left: 10px;
 	margin-right: 10px;
 	text-align: center;
-	font-family: 'Open Sans', sans-serif; 
-	font-weight: 400;
-	font-size: 13pt;
-	text-transform: uppercase;
 }
 .nav li a,
 #touch-menu {
@@ -159,7 +155,7 @@ input[type="search"] {
 }
 
 /*RESPONSIVE MENU*/
-@media (max-width: 660px) {
+@media (max-width: 680px) {
 	header {
 		top: 0;
 		left: 0;
@@ -215,6 +211,9 @@ input[type="search"] {
 		display: none;
 	}
 }
+@media (max-width: 680px) {
+	nav ul {display: inline-block;}
+}
 @media (max-height: 320px) and (max-width: 768px) {
 	.nav {
 		left: 58px;
@@ -242,6 +241,7 @@ main .container {
 }
 button {
 	background-color: white;
+	text-transform: uppercase;
 	border: 1px solid black;
 	padding: 10px 20px;
 }
@@ -267,13 +267,9 @@ main .row {
 	height: 300px;
 	margin: 10px 0 10px 0;
 }
-main .FAQ {
-	height: 610px;
-	background: url("images/main/pic9.jpg");
-}
-main h2 {
-	text-transform: uppercase;
-}
+main .FAQ {height: 610px;}
+main h2 {text-transform: uppercase;}
+main p {line-height: 1;}
 .block-1x1, .block-1x2, .block-2x1, .block-2x2 {
 	display: table;
 	float: left;
@@ -296,9 +292,14 @@ main h2 {
 	margin-bottom: 10px;
 }
 .block-2x2 {
+	display: relative;
 	width: 630px;
 	height: 610px;
 	margin: 0 5px 0 5px;
+}
+.block-2x2 img {
+	position: absolute;
+	z-index: 1;
 }
 .item-text {
 	display: table-cell;
@@ -309,6 +310,7 @@ main h2 {
 /*RESPONSIVE BLOCKS*/
 .disappear {display: table-cell;}
 .appear {display: none;}
+
 @media (max-width: 980px) {
 	main .row,  main .container {max-width: 640px;}
 	.block-1x2 {
@@ -319,7 +321,104 @@ main h2 {
 	.disappear {display: none;}
 	.appear {display: block;}
 }
+@media (max-width: 1921px) {
+	header {
+		background-image: url(../images/header_fullHD.png);
+		max-width: 1920px;
+		width: 100%;
+	}
+	.full-hd {
+		max-width: 1920px;
+		width: 100%;
+	}
+	main::after, main::before {
+	max-width: 100%;
+	}
+}
 
+/*HOVER EFFECTS*/
+.brighten img {
+          filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+     -moz-filter: brightness(50%);
+       -o-filter: brightness(50%);
+      -ms-filter: brightness(50%);
+
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.brighten img:hover {
+         filter: brightness(100%);
+ -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+      -o-filter: brightness(100%);
+     -ms-filter: brightness(100%);
+}
+
+/*QUEST LIST*/
+.FAQ-list {
+	position: absolute;
+	z-index: 2;
+	width: 630px;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 300;
+}
+.FAQ-list h2 {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: white;
+	margin: 35px auto;
+	font-size: 18pt;
+}
+.FAQ-list ul {
+	list-style-type: none;
+	margin: auto;
+}
+.FAQ-list ul li {
+	display: table;
+	width: 560px;
+	height: 70px;
+	color: black;
+	background-color: #ebebeb;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	padding-left: 20px;
+}
+.FAQ-list ul li:hover {
+	background-color: white;
+}
+.FAQ-list ul li p {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 14pt;
+}
+.FAQ-list ul li p:after {
+    font-family: 'FontAwesome'; 
+    font-size: 16pt;
+    content: "\f0da";
+    float: right;
+    margin-right: 20px;
+    color: black;
+}
+.FAQ-list ul+p {
+	text-align: right;
+}
+.FAQ-list button {
+	display: inline-block;
+	background: none;
+	border: 1px solid white;
+	color: white;
+	margin-right: 35px;
+	margin-top: 30px;
+}
+.FAQ-list button:hover {
+	color: #363636;
+}
 
 /*FOOTER*/
 footer {

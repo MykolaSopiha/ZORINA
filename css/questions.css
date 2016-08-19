@@ -28,15 +28,13 @@ main .fa {
 	float: right;
 }
 .panel-heading .accordion-toggle:after {
-    /* symbol for "opening" panels */
-    font-family: 'FontAwesome';  /* essential for enabling glyphicon */
-    content: "\f0da";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
-    color: grey;         /* adjust as needed */
+    font-family: 'FontAwesome'; 
+    content: "\f0da";
+    float: right;
+    color: grey;
 }
 .panel-heading .accordion-toggle.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content: "\f0d7";    /* adjust as needed, taken from bootstrap.css */
+    content: "\f0d7";
 }
 
 /*RECALL FORM*/

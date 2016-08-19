@@ -44,7 +44,7 @@ header .container {
 header {
 	position: relative;
 	padding: 0px;
-	background-image: url("../images/background_header.png");
+	background-image: url("../images/mini_header.png");
 	max-width: 1120px;
 	height: 50px;
 }
