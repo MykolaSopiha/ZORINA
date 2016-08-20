@@ -55,7 +55,7 @@ nav {
 }
 .nav {
 	display: inline-block;
-	width: 641px;
+	width: 583px;
 }
 .nav ul {
 	display: inline-block;
@@ -74,7 +74,6 @@ nav {
 	font-weight: bold;
 	font-family: 'Open Sans', sans-serif; 
 	font-weight: 400;
-	font-size: 14pt;
 	padding: 0;
 	margin-top: 5px;
 	text-transform: uppercase;
@@ -82,6 +81,8 @@ nav {
 	z-index: 5;
 	color: #fff;
 }
+.nav li a {font-size: 13pt;}
+#touch-menu {font-size: 16pt;}
 .nav li a:hover {background: none; text-decoration: underline;}
 header .current {text-decoration: underline white;}
 #touch-menu {display: none;}
@@ -268,8 +269,12 @@ main .row {
 	margin: 10px 0 10px 0;
 }
 main .FAQ {height: 610px;}
-main h2 {text-transform: uppercase;}
+main h2 {
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
 main p {line-height: 1;}
+main button {margin-top: 20px;}
 .block-1x1, .block-1x2, .block-2x1, .block-2x2 {
 	display: table;
 	float: left;
@@ -311,6 +316,14 @@ main p {line-height: 1;}
 .disappear {display: table-cell;}
 .appear {display: none;}
 
+.appear-full-hd {display: none;}
+.disappear-full-hd {display: table;}
+@media (min-width: 1600px) {
+	.appear-full-hd {display: table;}
+	.disappear-full-hd {display: none;}
+}
+
+/*SMALL FORMAT*/
 @media (max-width: 980px) {
 	main .row,  main .container {max-width: 640px;}
 	.block-1x2 {
@@ -321,28 +334,33 @@ main p {line-height: 1;}
 	.disappear {display: none;}
 	.appear {display: block;}
 }
-@media (max-width: 1921px) {
+/*LARGE FORMAT*/
+@media (min-width: 1600px) {
 	header {
 		background-image: url(../images/header_fullHD.png);
-		max-width: 1920px;
-		width: 100%;
 	}
 	.full-hd {
 		max-width: 1920px;
 		width: 100%;
 	}
-	main::after, main::before {
-	max-width: 100%;
+	main::after, main::before {max-width: 100%;}
+	main .row:nth-child(3), main .row:nth-child(4),
+	main .row:nth-child(7) {display: none;}
+	main .container {width: 1600px;}
+	main .row {width: 1600px;}
+	main .row:nth-child(5) .block-1x2 {
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 }
 
 /*HOVER EFFECTS*/
 .brighten img {
-          filter: brightness(50%);
-  -webkit-filter: brightness(50%);
-     -moz-filter: brightness(50%);
-       -o-filter: brightness(50%);
-      -ms-filter: brightness(50%);
+          filter: brightness(30%);
+  -webkit-filter: brightness(30%);
+     -moz-filter: brightness(30%);
+       -o-filter: brightness(30%);
+      -ms-filter: brightness(30%);
 
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
@@ -392,12 +410,14 @@ main p {line-height: 1;}
 .FAQ-list ul li:hover {
 	background-color: white;
 }
-.FAQ-list ul li p {
+.FAQ-list ul li a {
 	display: table-cell;
 	vertical-align: middle;
 	font-size: 14pt;
+	text-decoration: none;
+	color: black;
 }
-.FAQ-list ul li p:after {
+.FAQ-list ul li a:after {
     font-family: 'FontAwesome'; 
     font-size: 16pt;
     content: "\f0da";
